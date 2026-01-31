@@ -333,37 +333,3 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
     document.head.appendChild(style);
 });
-
-// Lightbox
-function openLightbox(src) {
-    const lightbox = document.querySelector('.lightbox');
-    if (lightbox) {
-        lightbox.querySelector('.lightbox-img').src = src;
-        lightbox.classList.add('active');
-    }
-}
-
-function closeLightbox() {
-    const lightbox = document.querySelector('.lightbox');
-    if (lightbox) {
-        lightbox.classList.remove('active');
-    }
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    // Lightbox click handlers
-    const lightbox = document.querySelector('.lightbox');
-    if (lightbox) {
-        lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox || e.target.classList.contains('lightbox-close')) {
-                closeLightbox();
-            }
-        });
-        
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                closeLightbox();
-            }
-        });
-    }
-});
