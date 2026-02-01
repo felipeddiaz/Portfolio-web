@@ -351,7 +351,7 @@ function closeLightbox() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Lightbox click handlers
+    // Lightbox click handlers (nuevo ajuste)
     const lightbox = document.querySelector('.lightbox');
     if (lightbox) {
         lightbox.addEventListener('click', (e) => {
