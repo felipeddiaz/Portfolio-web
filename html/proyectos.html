@@ -445,51 +445,57 @@
                 
                 <div class="project-detail-content reverse">
                     <div class="project-detail-info">
-                        <h2>Análisis de Ventas</h2>
-                        <p class="project-subtitle">Pipeline de análisis de datos Superstore</p>
+                        <h2>Análisis Predictivo - Superstore dataset</h2>
+                        <p class="project-subtitle">Pipeline de análisis y modelado predictivo</p>
                         
                         <div class="project-description">
                             <h3><i class="fas fa-crosshairs"></i> El problema</h3>
-                            <p>Dataset de ventas con <strong>10,000+ registros</strong> sin procesar. Se necesitaba identificar patrones, segmentos rentables y predecir ventas futuras.</p>
+                            <p>Dataset retail con <strong>9,800+ transacciones</strong> sin procesar, formatos inconsistentes y ausencia de variables críticas como precio unitario.</p>
                             
                             <h3><i class="fas fa-user"></i> Mi rol</h3>
-                            <p>Análisis completo end-to-end: limpieza, EDA, visualización, modelado y reporte. Proyecto académico.</p>
+                            <p>Desarrollo completo como <strong>Data Scientist</strong>: limpieza de datos, feature engineering avanzado, modelado predictivo, evaluación y generación de insights accionables. </p>
 
                             <h3><i class="fas fa-code"></i> Decisiones técnicas</h3>
                             <div class="key-decision">
                                 <p>Pipeline reproducible con <strong>Pandas</strong> — cada paso documentado para que cualquiera pueda replicar el análisis.</p>
                             </div>
                             <ul>
-                                <li><strong>Matplotlib/Seaborn</strong> para visualizaciones exploratorias</li>
-                                <li><strong>Random Forest</strong> para modelo predictivo — buen balance entre interpretabilidad y performance</li>
-                                <li>Reporte final en formato <strong>APA</strong> para entrega académica</li>
+                                <li><strong>Limpieza y estandarización</strong>  de 31 variables base</li>
+                                <li><strong>Feature engineering avanzado</strong> : +34 variables mediante agregaciones históricas</li>
+                                <li>Se eligió <strong>Linear Regression</strong> como modelo principal tras observar que, con un feature engineering robusto, superó a modelos más complejos </li>
                             </ul>
                             
                             <h3><i class="fas fa-exclamation-triangle"></i> Desafíos</h3>
                             <div class="challenge-block">
-                                <p class="challenge-problem">Datos con formatos inconsistentes en fechas y categorías</p>
+                                <p class="challenge-problem">Datos con formatos inconsistentes</p>
                                 <p class="challenge-solution">Pipeline de limpieza reproducible documentado paso a paso</p>
+                            </div>
+                            <div class="challenge-block">
+                                <p class="challenge-problem">Modelo inicial con R² ≈ 11% por falta de información</p>
+                                <p class="challenge-solution">Feature engineering enfocado en reconstruir información faltante</p>
+                                <p class="challenge-solution">Mejora de <strong>+793%</strong> en capacidad predictiva</p>
+                                
                             </div>
 
                             <h3><i class="fas fa-chart-line"></i> Resultados</h3>
                             <div class="results-grid">
                                 <div class="result-item">
-                                    <span class="result-value">85%</span>
-                                    <span class="result-label">Accuracy</span>
+                                    <span class="result-value">95%</span>
+                                    <span class="result-label">R²</span>
                                 </div>
                                 <div class="result-item">
-                                    <span class="result-value">3</span>
-                                    <span class="result-label">Segmentos</span>
+                                    <span class="result-value">45</span>
+                                    <span class="result-label">Features finales</span>
                                 </div>
                                 <div class="result-item">
-                                    <span class="result-value">+40%</span>
-                                    <span class="result-label">Ventas Q4</span>
+                                    <span class="result-value">+793%</span>
+                                    <span class="result-label">capacidad predictiva</span>
                                 </div>
                             </div>
                             
                             <h3><i class="fas fa-lightbulb"></i> Aprendizajes</h3>
                             <ul>
-                                <li>La <strong>visualización</strong> importa tanto como el análisis</li>
+                                <li>Feature engineering bien dirigido puede superar modelos complejos</li>
                                 <li>Un buen gráfico comunica insights que una tabla de números no puede</li>
                             </ul>
                         </div>
@@ -509,6 +515,10 @@
                                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" alt="Jupyter">
                                     <span>Jupyter</span>
                                 </div>
+                                <div class="tech-item">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" alt="Jupyter">
+                                    <span>scikitlearn</span>
+                                </div>
                             </div>
                         </div>
                         
@@ -526,17 +536,25 @@
                     
                     <div class="project-detail-visual">
                         <div class="project-screenshots">
-                            <div class="screenshot-placeholder">
-                                <span>📊</span>
-                                <p>Dashboard de ventas</p>
+                            <div class="screenshot-placeholder" onclick="openLightbox(this.querySelector('img').src)">
+                            <span></span>
+                                <img src ="../img/imgprojects/supstore/1_prediccion_vs_real.webp" alt="Prediccion vs ventas reales">
+                                <p>Prediccion vs ventas reales</p>
                             </div>
-                            <div class="screenshot-placeholder">
-                                <span>👥</span>
-                                <p>Análisis de segmentos</p>
+                            <div class="screenshot-placeholder" onclick="openLightbox(this.querySelector('img').src)">
+                            <span></span>
+                                <img src ="../img/imgprojects/supstore/2_feature_importance.webp" alt="Features por importancia">
+                                <p>Features por importancia</p>
                             </div>
-                            <div class="screenshot-placeholder">
-                                <span>📈</span>
-                                <p>Predicción temporal</p>
+                            <div class="screenshot-placeholder" onclick="openLightbox(this.querySelector('img').src)">
+                            <span></span>
+                                <img src ="../img/imgprojects/supstore/3_distribucion_errores.webp" alt="Distribucion de errores">
+                                <p>Distribucion de errores</p>
+                            </div>
+                            <div class="screenshot-placeholder" onclick="openLightbox(this.querySelector('img').src)">
+                            <span></span>
+                                <img src ="../img/imgprojects/supstore/4_comparacion_v1_v2.webp" alt="Comparacion de modelos">
+                                <p>Comparacion de modelos</p>
                             </div>
                         </div>
                     </div>
@@ -570,542 +588,3 @@
 
     <script src="../js/main.js"></script>
 </body>
-=======
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyectos | Felipe Diaz</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Mismo CSS que index.html -->
-    <link rel="stylesheet" href="../css/styles.css">
-</head>
-<body>
-    <!-- Mismo nav que index.html -->
-    <nav class="nav">
-        <a href="../index.html" class="nav-logo">LF<span class="dot"></span></a>
-        <ul class="nav-links">
-            <li><a href="../index.html#about">Sobre mí</a></li>
-            <li><a href="html/proyectos.html">Proyectos</a></li>
-            <li><a href="../index.html#contact">Contacto</a></li>
-        </ul>
-        <a href="../index.html#contact" class="nav-btn">Hablemos</a>
-    </nav>
-
-    <!-- Header de la página -->
-    <header class="page-header">
-        <div class="container">
-            <a href="index.html" class="back-link">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-                Volver al inicio
-            </a>
-            <h1 class="page-title">Mis Proyectos</h1>
-            <p class="page-desc">Una selección de proyectos en los que he trabajado, desde aplicaciones web hasta sistemas de escritorio y análisis de datos.</p>
-        </div>
-    </header>
-
-    <!-- Proyectos detallados -->
-    <main class="projects-detail">
-        <div class="container">
-            
-            <!-- Proyecto 1: Juice Shop -->
-            <article class="project-detail" id="juice-shop">
-                <div class="project-detail-header">
-                    <span class="project-number">01</span>
-                    <div class="project-detail-tags">
-                        <span class="tag">E-commerce</span>
-                        <span class="tag">Full Stack</span>
-                    </div>
-                </div>
-                
-                <div class="project-detail-content">
-                    <div class="project-detail-info">
-                        <h2>Juice Shop</h2>
-                        <p class="project-subtitle">Tienda online de jugos naturales</p>
-                        
-                        <div class="project-description">
-                            <h3><i class="fas fa-crosshairs"></i> El problema</h3>
-                            <p>Un negocio local de jugos necesitaba vender online pero las plataformas existentes cobraban <strong>comisiones altas</strong> y no se adaptaban a su flujo de trabajo.</p>
-                            
-                            <h3><i class="fas fa-user"></i> Mi rol</h3>
-                            <p>Desarrollo completo del proyecto:</p>
-                            <ul>
-                                <li>Diseño de la base de datos</li>
-                                <li>Desarrollo backend y frontend</li>
-                                <li>Integración de pagos</li>
-                                <li>Despliegue y capacitación al cliente</li>
-                            </ul>
-
-                            <h3><i class="fas fa-code"></i> Decisiones técnicas</h3>
-                            <div class="key-decision">
-                                <p><strong>Django</strong> por su panel de administración integrado — redujo semanas de desarrollo sin sacrificar funcionalidad.</p>
-                            </div>
-                            <ul>
-                                <li><strong>SQLite</strong> en desarrollo para acelerar pruebas; preparado para migrar a MySQL en producción</li>
-                                <li>Carrito basado en <strong>sesiones</strong> — usuarios pueden agregar productos sin registrarse</li>
-                                <li>Fusión automática del carrito con la cuenta al autenticarse</li>
-                            </ul>
-                            
-                            <h3><i class="fas fa-exclamation-triangle"></i> Desafíos</h3>
-                            <div class="challenge-block">
-                                <p class="challenge-problem">El carrito debía funcionar sin registro y conservar productos al crear cuenta</p>
-                                <p class="challenge-solution">Combinación de datos en sesión con el modelo de usuario al autenticarse</p>
-                            </div>
-                            <div class="challenge-block">
-                                <p class="challenge-problem">Primera integración con API de pagos externa</p>
-                                <p class="challenge-solution">Documentación exhaustiva y pruebas en sandbox antes de producción</p>
-                            </div>
-                            <div class="challenge-block">
-                                <p class="challenge-problem">Panel admin no mostraba pedidos en tiempo real</p>
-                                <p class="challenge-solution">Sistema de notificaciones para alertar nuevos pedidos sin recargar</p>
-                            </div>
-
-                            <h3><i class="fas fa-chart-line"></i> Resultados</h3>
-                            <div class="results-grid">
-                                <div class="result-item">
-                                    <span class="result-value">&lt;2s</span>
-                                    <span class="result-label">Carga</span>
-                                </div>
-                                <div class="result-item">
-                                    <span class="result-value">1 sem</span>
-                                    <span class="result-label">Panel admin</span>
-                                </div>
-                                <div class="result-item">
-                                    <span class="result-value">0%</span>
-                                    <span class="result-label">Comisiones</span>
-                                </div>
-                            </div>
-                            
-                            <h3><i class="fas fa-lightbulb"></i> Aprendizajes</h3>
-                            <ul>
-                                <li>Priorizar soluciones prácticas: usar el admin de Django permitió entregar valor más rápido</li>
-                                <li>Buenas prácticas orientadas a <strong>escalabilidad</strong> y mantenimiento</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="project-tech-stack">
-                            <h3>Stack</h3>
-                            <div class="tech-grid">
-                                <div class="tech-item">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django">
-                                    <span>Django</span>
-                                </div>
-                                <div class="tech-item">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite">
-                                    <span>SQLite</span>
-                                </div>
-                                <div class="tech-item">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
-                                    <span>JavaScript</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="project-links">
-                            <a href="#" class="btn-primary">
-                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                                Ver código
-                            </a>
-                            <a href="#" class="btn-secondary">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                                Demo en vivo
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="project-detail-visual">
-                        <div class="project-screenshots">
-                            <div class="screenshot-placeholder">
-                                <span>📸</span>
-                                <p>Página principal</p>
-                            </div>
-                            <div class="screenshot-placeholder">
-                                <span>🛒</span>
-                                <p>Carrito de compras</p>
-                            </div>
-                            <div class="screenshot-placeholder">
-                                <span>⚙️</span>
-                                <p>Panel admin</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Proyecto 2: ML Prediction -->
-            <article class="project-detail" id="ml-prediction">
-                <div class="project-detail-header">
-                    <span class="project-number">02</span>
-                    <div class="project-detail-tags">
-                        <span class="tag">Machine Learning</span>
-                        <span class="tag">Data Science</span>
-                        <span class="tag developing">En desarrollo</span>
-                    </div>
-                </div>
-                
-                <div class="project-detail-content reverse">
-                    <div class="project-detail-info">
-                        <h2>Predicción de Partidos</h2>
-                        <p class="project-subtitle">Sistema predictivo de fútbol con XGBoost</p>
-                        
-                        <div class="project-description">
-                            <h3><i class="fas fa-crosshairs"></i> El problema</h3>
-                            <p>Predecir resultados de partidos de fútbol a partir de datos históricos, reduciendo el impacto del azar y traduciendo el desempeño de los equipos en <strong>estadísticos medibles</strong>.</p>
-                            <p>El reto: trabajar con <strong>datos ruidosos y desbalanceados</strong>, donde empates y victorias del no favorito ocurren con menor frecuencia.</p>
-                            
-                            <h3><i class="fas fa-user"></i> Mi rol</h3>
-                            <p>Pipeline completo de ciencia de datos (proyecto en desarrollo):</p>
-                            <ul>
-                                <li>Exploración y análisis de datos</li>
-                                <li>Limpieza y unificación de múltiples fuentes</li>
-                                <li>Feature engineering (+50 variables)</li>
-                                <li>Entrenamiento y evaluación de modelos</li>
-                                <li>Ajuste de métricas y umbrales de decisión</li>
-                            </ul>
-
-                            <h3><i class="fas fa-code"></i> Decisiones técnicas</h3>
-                            <div class="key-decision">
-                                <p><strong>XGBoost</strong> por su manejo nativo de valores faltantes y soporte para datos desbalanceados mediante <strong>scale_pos_weight</strong>.</p>
-                            </div>
-                            <ul>
-                                <li><strong>Optuna</strong> para optimización — más eficiente que GridSearch en espacios amplios</li>
-                                <li>Validación cruzada <strong>estratificada</strong> para mantener proporciones reales</li>
-                                <li>Ajuste dinámico del <strong>threshold</strong> para balancear precisión y recall</li>
-                                <li>Ingeniería de <strong>+50 features</strong>, evaluando aporte individual al modelo</li>
-                            </ul>
-                            
-                            <h3><i class="fas fa-exclamation-triangle"></i> Desafíos</h3>
-                            <div class="challenge-block">
-                                <p class="challenge-problem">Modelo inicial predecía siempre al favorito (replicaba cuotas de apuestas)</p>
-                                <p class="challenge-solution">Eliminación de features con data leakage + enfoque en estadísticas de rendimiento</p>
-                            </div>
-                            <div class="challenge-block">
-                                <p class="challenge-problem">Empates casi inexistentes por desbalance de clases</p>
-                                <p class="challenge-solution">scale_pos_weight + cost-sensitive learning + ajuste de threshold por clase</p>
-                            </div>
-                            <div class="challenge-block">
-                                <p class="challenge-problem">Datasets incompletos e inconsistentes</p>
-                                <p class="challenge-solution">Pipeline de limpieza: unificar tipos, excluir variables sin respaldo histórico</p>
-                            </div>
-                            <div class="challenge-block">
-                                <p class="challenge-problem">Predicciones alineadas con favorito = sin valor real</p>
-                                <p class="challenge-solution">Introducción de value betting: solo apostar cuando probabilidad estimada > cuota implícita</p>
-                            </div>
-
-                            <h3><i class="fas fa-chart-line"></i> Resultados actuales</h3>
-                            <div class="results-grid">
-                                <div class="result-item">
-                                    <span class="result-value">0.54</span>
-                                    <span class="result-label">F1-score</span>
-                                </div>
-                                <div class="result-item">
-                                    <span class="result-value">52+</span>
-                                    <span class="result-label">Features</span>
-                                </div>
-                                <div class="result-item">
-                                    <span class="result-value">✓</span>
-                                    <span class="result-label">Balance clases</span>
-                                </div>
-                            </div>
-                            
-                            <h3><i class="fas fa-lightbulb"></i> Aprendizajes</h3>
-                            <ul>
-                                <li>La <strong>métrica correcta</strong> importa más que el accuracy</li>
-                                <li>En datos desbalanceados, optimizar F1 cambia completamente el enfoque</li>
-                                <li>Value betting > predecir al favorito siempre</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="project-tech-stack">
-                            <h3>Stack</h3>
-                            <div class="tech-grid">
-                                <div class="tech-item">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
-                                    <span>Python</span>
-                                </div>
-                                <div class="tech-item">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas">
-                                    <span>Pandas</span>
-                                </div>
-                                <div class="tech-item">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" alt="Jupyter">
-                                    <span>Jupyter</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="project-links">
-                            <a href="#" class="btn-primary">
-                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                                Ver código
-                            </a>
-                            <a href="#" class="btn-secondary">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                                Ver notebook
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="project-detail-visual">
-                        <div class="project-screenshots">
-                            <div class="screenshot-placeholder">
-                                <span>📊</span>
-                                <p>Matriz de confusión</p>
-                            </div>
-                            <div class="screenshot-placeholder">
-                                <span>📈</span>
-                                <p>Feature importance</p>
-                            </div>
-                            <div class="screenshot-placeholder">
-                                <span>📉</span>
-                                <p>Curva ROC</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Proyecto 3: POS System -->
-            <article class="project-detail" id="pos-system">
-                <div class="project-detail-header">
-                    <span class="project-number">03</span>
-                    <div class="project-detail-tags">
-                        <span class="tag">Desktop App</span>
-                        <span class="tag">C# / .NET</span>
-                    </div>
-                </div>
-                
-                <div class="project-detail-content">
-                    <div class="project-detail-info">
-                        <h2>Sistema Punto de Venta</h2>
-                        <p class="project-subtitle">Aplicación de escritorio para gestión de ventas</p>
-                        
-                        <div class="project-description">
-                            <h3><i class="fas fa-crosshairs"></i> El problema</h3>
-                            <p>Pequeños negocios usaban <strong>Excel</strong> para llevar ventas e inventario — perdían datos y no había control de acceso por empleado.</p>
-                            
-                            <h3><i class="fas fa-user"></i> Mi rol</h3>
-                            <p>Arquitectura, desarrollo y testing. <strong>Aprendí C# durante el proyecto.</strong> Proyecto individual.</p>
-
-                            <h3><i class="fas fa-code"></i> Decisiones técnicas</h3>
-                            <div class="key-decision">
-                                <p><strong>WinUI 3</strong> para UI moderna y nativa en Windows + patrón <strong>MVVM</strong> para separar lógica de interfaz.</p>
-                            </div>
-                            <ul>
-                                <li><strong>SQL Server LocalDB</strong> — no requiere servidor externo, ideal para negocios pequeños</li>
-                                <li><strong>QuestPDF</strong> para generar tickets y reportes profesionales</li>
-                                <li>Sistema de roles: Admin, Vendedor, Cajero con permisos diferentes</li>
-                            </ul>
-                            
-                            <h3><i class="fas fa-exclamation-triangle"></i> Desafíos</h3>
-                            <div class="challenge-block">
-                                <p class="challenge-problem">Primer proyecto en C# — curva de aprendizaje fuerte con async/await y data binding</p>
-                                <p class="challenge-solution">Documenté todo el proceso y aprendí lo necesario para cada feature, no todo a la vez</p>
-                            </div>
-                            <div class="challenge-block">
-                                <p class="challenge-problem">Reportes PDF con formato profesional</p>
-                                <p class="challenge-solution">QuestPDF con templates reutilizables para tickets y reportes</p>
-                            </div>
-
-                            <h3><i class="fas fa-chart-line"></i> Resultados</h3>
-                            <div class="results-grid">
-                                <div class="result-item">
-                                    <span class="result-value">3</span>
-                                    <span class="result-label">Roles</span>
-                                </div>
-                                <div class="result-item">
-                                    <span class="result-value">&lt;1s</span>
-                                    <span class="result-label">Gen. PDF</span>
-                                </div>
-                                <div class="result-item">
-                                    <span class="result-value">0</span>
-                                    <span class="result-label">Datos perdidos</span>
-                                </div>
-                            </div>
-                            
-                            <h3><i class="fas fa-lightbulb"></i> Aprendizajes</h3>
-                            <ul>
-                                <li>Aprendí un <strong>lenguaje nuevo bajo presión</strong> — la clave fue no intentar aprenderlo todo</li>
-                                <li>MVVM facilita mucho el testing y mantenimiento a largo plazo</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="project-tech-stack">
-                            <h3>Stack</h3>
-                            <div class="tech-grid">
-                                <div class="tech-item">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#">
-                                    <span>C#</span>
-                                </div>
-                                <div class="tech-item">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" alt=".NET">
-                                    <span>.NET 8</span>
-                                </div>
-                                <div class="tech-item">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="SQL Server">
-                                    <span>SQL Server</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="project-links">
-                            <a href="#" class="btn-primary">
-                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                                Ver código
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="project-detail-visual">
-                        <div class="project-screenshots">
-                            <div class="screenshot-placeholder">
-                                <span>🖥️</span>
-                                <p>Dashboard principal</p>
-                            </div>
-                            <div class="screenshot-placeholder">
-                                <span>💳</span>
-                                <p>Registro de venta</p>
-                            </div>
-                            <div class="screenshot-placeholder">
-                                <span>📄</span>
-                                <p>Reporte PDF</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Proyecto 4: Sales Analysis -->
-            <article class="project-detail" id="sales-analysis">
-                <div class="project-detail-header">
-                    <span class="project-number">04</span>
-                    <div class="project-detail-tags">
-                        <span class="tag">Data Science</span>
-                        <span class="tag">Analytics</span>
-                    </div>
-                </div>
-                
-                <div class="project-detail-content reverse">
-                    <div class="project-detail-info">
-                        <h2>Análisis de Ventas</h2>
-                        <p class="project-subtitle">Pipeline de análisis de datos Superstore</p>
-                        
-                        <div class="project-description">
-                            <h3><i class="fas fa-crosshairs"></i> El problema</h3>
-                            <p>Dataset de ventas con <strong>10,000+ registros</strong> sin procesar. Se necesitaba identificar patrones, segmentos rentables y predecir ventas futuras.</p>
-                            
-                            <h3><i class="fas fa-user"></i> Mi rol</h3>
-                            <p>Análisis completo end-to-end: limpieza, EDA, visualización, modelado y reporte. Proyecto académico.</p>
-
-                            <h3><i class="fas fa-code"></i> Decisiones técnicas</h3>
-                            <div class="key-decision">
-                                <p>Pipeline reproducible con <strong>Pandas</strong> — cada paso documentado para que cualquiera pueda replicar el análisis.</p>
-                            </div>
-                            <ul>
-                                <li><strong>Matplotlib/Seaborn</strong> para visualizaciones exploratorias</li>
-                                <li><strong>Random Forest</strong> para modelo predictivo — buen balance entre interpretabilidad y performance</li>
-                                <li>Reporte final en formato <strong>APA</strong> para entrega académica</li>
-                            </ul>
-                            
-                            <h3><i class="fas fa-exclamation-triangle"></i> Desafíos</h3>
-                            <div class="challenge-block">
-                                <p class="challenge-problem">Datos con formatos inconsistentes en fechas y categorías</p>
-                                <p class="challenge-solution">Pipeline de limpieza reproducible documentado paso a paso</p>
-                            </div>
-
-                            <h3><i class="fas fa-chart-line"></i> Resultados</h3>
-                            <div class="results-grid">
-                                <div class="result-item">
-                                    <span class="result-value">85%</span>
-                                    <span class="result-label">Accuracy</span>
-                                </div>
-                                <div class="result-item">
-                                    <span class="result-value">3</span>
-                                    <span class="result-label">Segmentos</span>
-                                </div>
-                                <div class="result-item">
-                                    <span class="result-value">+40%</span>
-                                    <span class="result-label">Ventas Q4</span>
-                                </div>
-                            </div>
-                            
-                            <h3><i class="fas fa-lightbulb"></i> Aprendizajes</h3>
-                            <ul>
-                                <li>La <strong>visualización</strong> importa tanto como el análisis</li>
-                                <li>Un buen gráfico comunica insights que una tabla de números no puede</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="project-tech-stack">
-                            <h3>Stack</h3>
-                            <div class="tech-grid">
-                                <div class="tech-item">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
-                                    <span>Python</span>
-                                </div>
-                                <div class="tech-item">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas">
-                                    <span>Pandas</span>
-                                </div>
-                                <div class="tech-item">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" alt="Jupyter">
-                                    <span>Jupyter</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="project-links">
-                            <a href="#" class="btn-primary">
-                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                                Ver código
-                            </a>
-                            <a href="#" class="btn-secondary">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                                Ver notebook
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="project-detail-visual">
-                        <div class="project-screenshots">
-                            <div class="screenshot-placeholder">
-                                <span>📊</span>
-                                <p>Dashboard de ventas</p>
-                            </div>
-                            <div class="screenshot-placeholder">
-                                <span>👥</span>
-                                <p>Análisis de segmentos</p>
-                            </div>
-                            <div class="screenshot-placeholder">
-                                <span>📈</span>
-                                <p>Predicción temporal</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-        </div>
-    </main>
-
-    <!-- CTA Final -->
-    <section class="projects-cta">
-        <div class="container">
-            <h2>¿Tienes un proyecto en mente?</h2>
-            <p>Me encantaría escuchar sobre tu idea y ver cómo puedo ayudarte.</p>
-            <a href="index.html#contact" class="btn-primary">Hablemos</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>Felipe Diaz © 2024</p>
-        </div>
-    </footer>
-
-    <script src="../js/main.js"></script>
-</body>
-</html>
