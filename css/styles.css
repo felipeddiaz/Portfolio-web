@@ -136,8 +136,8 @@ a.project-card {
 
 /* CONTACT */
 .contact { padding: 100px 0; }
-.contact .container { max-width: 1100px; }
-.contact-layout { display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 60px; align-items: start; }
+.contact .container { max-width: 700px; }
+.contact-layout { display: flex; justify-content: center; align-items: start; }
 .contact-left { width: 100%; }
 .contact .section-title { text-align: left; margin-bottom: 12px; }
 .contact-intro { color: var(--text-2); font-size: 16px; margin-bottom: 28px; line-height: 1.6; }
@@ -179,7 +179,7 @@ a.project-card {
 .social-links a:hover { border-color: var(--accent); color: var(--text); transform: translateY(-2px); }
 
 /* PHOTO */
-.contact-right { display: flex; justify-content: center; padding-top: 40px; }
+/* .contact-right { display: flex; justify-content: center; padding-top: 40px; }
 .contact-photo { position: relative; width: 100%; max-width: 300px; }
 .photo-glow { position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; background: radial-gradient(circle, rgba(107, 138, 253, 0.3) 0%, transparent 60%); transform: translate(-50%, -50%); filter: blur(50px); animation: pulseGlow 4s ease-in-out infinite; z-index: 0; }
 .photo-frame { position: relative; border-radius: 20px; overflow: hidden; border: 2px solid var(--bg-3); transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); z-index: 1; }
@@ -190,7 +190,7 @@ a.project-card {
 .photo-frame:hover img { filter: grayscale(0%) contrast(1); }
 .photo-decoration { position: absolute; top: -15px; right: -15px; width: 100px; height: 100px; border: 2px solid var(--accent); border-radius: 16px; opacity: 0.4; z-index: 0; animation: decorFloat 6s ease-in-out infinite; }
 .photo-decoration::after { content: ''; position: absolute; bottom: -25px; left: -25px; width: 60px; height: 60px; border: 2px solid var(--accent-2); border-radius: 10px; opacity: 0.6; }
-
+*/
 /* FOOTER */
 .footer { padding: 32px 0; text-align: center; border-top: 1px solid var(--bg-3); }
 .footer p { font-size: 13px; color: var(--text-3); }
@@ -225,8 +225,8 @@ a.project-card {
     .projects-grid { grid-template-columns: 1fr; }
     .nav-links { display: none; }
     .contact-layout { grid-template-columns: 1fr; gap: 48px; }
-    .contact-right { order: -1; }
-    .contact-photo { max-width: 250px; margin: 0 auto; }
+    /* .contact-right { order: -1; } */
+    /*.contact-photo { max-width: 250px; margin: 0 auto; }*/
     .contact .section-title, .contact-left { text-align: center; }
     .form-submit { align-self: center; }
     .social-links { justify-content: center; }
@@ -346,7 +346,7 @@ a.project-card {
     min-height: 140px;
 }
 
-/* Photo shine effect on hover */
+/* Photo shine effect on hover 
 .photo-frame::after {
     content: '';
     position: absolute;
@@ -369,7 +369,7 @@ a.project-card {
 }
 .photo-frame:hover::after {
     transform: rotate(45deg) translateY(-100%);
-}
+}*/
 
 /* Email box hover glow intensify */
 .contact-email-box:hover .email-glow {
