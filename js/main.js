@@ -174,6 +174,67 @@ function animateCounter(element) {
 }
 
 /* ============================================
+   RESULTS COUNTER ANIMATION (para proyectos)
+   ============================================ */
+function initResultsCounter() {
+    const counters = document.querySelectorAll('.result-value');
+    
+    if (counters.length === 0) return;
+    
+    const observerOptions = {
+        threshold: 0.5
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !entry.target.dataset.counted) {
+                animateResultCounter(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    
+    counters.forEach(counter => observer.observe(counter));
+}
+
+function animateResultCounter(element) {
+    element.dataset.counted = 'true';
+    
+    const text = element.textContent.trim();
+    let finalValue = parseFloat(text.replace(/[^0-9.-]/g, ''));
+    const hasDecimal = text.includes('.');
+    const hasPercent = text.includes('%');
+    const hasPlus = text.startsWith('+');
+    const prefix = hasPlus ? '+' : '';
+    const suffix = hasPercent ? '%' : '';
+    
+    const duration = 1500;
+    const startTime = performance.now();
+    
+    function update(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easeProgress = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+        const currentValue = finalValue * easeProgress;
+        
+        if (hasDecimal) {
+            element.textContent = prefix + currentValue.toFixed(2) + suffix;
+        } else {
+            element.textContent = prefix + Math.round(currentValue) + suffix;
+        }
+        
+        if (progress < 1) {
+            requestAnimationFrame(update);
+        } else {
+            // Valor final exacto
+            element.textContent = text;
+        }
+    }
+    
+    requestAnimationFrame(update);
+}
+
+/* ============================================
    TERMINAL ANIMATION
    ============================================ */
 function initTerminalAnimation() {

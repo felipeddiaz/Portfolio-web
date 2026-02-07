@@ -1,0 +1,9 @@
+Proximos pasos:
+
+1. Ajuste de contacto al usar el autocompletado
+2. Efecto de estrellas (por probar)
+3. Cambio de presentacion en proyectos
+4. Cambio de icono
+5. Imagenes de proyecto c#
+6. Dowload CV
+7. Agregar mas proyectos
